@@ -1,7 +1,7 @@
 import tensorflow as tf
 print(tf.__version__)
 
-mnist = tf.keras.datasets.mnist
+mnist = tf.keras.datasets.fashion_mnist
 
 (training_images, training_labels) ,  (test_images, test_labels) = mnist.load_data()
 
@@ -15,7 +15,7 @@ model = tf.keras.models.Sequential([tf.keras.layers.Flatten(),
 
 model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(training_images, training_labels, epochs=30)
+model.fit(training_images, training_labels, epochs=10)
 
 print(model.evaluate(test_images, test_labels))
 
