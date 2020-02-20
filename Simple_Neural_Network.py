@@ -12,6 +12,6 @@ ys = np.array([-3.0, -1.0, 1.0, 3.0, 5.0, 7.0], dtype=float)
 
 model.fit(xs, ys, epochs=1000)
 
-print(model.predict([10.0]))
+print(model.predict([10.0])) # I am here
 
 print("Layer variables look like this: {}".format(layer_0.get_weights()))
